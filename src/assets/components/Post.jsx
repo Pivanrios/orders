@@ -11,8 +11,9 @@ function Post() {
     }
     setContent();
   return (
-    <div>
-        <div dangerouslySetInnerHTML={{__html:body}}/>
+    <div className='w-screen flex flex-col items-center'>
+        <div dangerouslySetInnerHTML={{__html:body}}
+                className='bg-slate-300 w-2/4'/>
     </div>
   )
 }

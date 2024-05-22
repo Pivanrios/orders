@@ -6,4 +6,8 @@
 .list{
     list-style: disc outside;
     margin: 20px;
+}h2{
+    background-color: bisque;
+    font-weight: bold;
+    font-size: x-large;
 }

@@ -4,11 +4,11 @@ import './index.css'
 import { Route,RouterProvider,createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Orders from './assets/components/Orders.jsx';
 import Form from './assets/components/Form.jsx';
-import Tiptap from './assets/components/Tiptap.jsx';
+import TextEditor from './assets/components/TextEditor.jsx';
 
 const router = createBrowserRouter(//version 6.4 of react-router
   createRoutesFromElements(
-      <Route path='/' element={<Tiptap/>}>
+      <Route path='/' element={<TextEditor/>}>
         <Route path='takeOrder' element={<Form/>}/>
         <Route path='orders' element={<Orders/>}/>
       </Route>

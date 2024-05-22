@@ -4,7 +4,7 @@ import { Bold,
         Heading2, 
         List, 
         Undo } from 'lucide-react' 
-import Heading from '@tiptap/extension-heading'
+
 
 function Toolbar({editor, content}) {
   return (
@@ -28,11 +28,24 @@ function Toolbar({editor, content}) {
             <button
                     onClick={(e)=>{
                         e.preventDefault();
-                        editor.commands.toggleHeading({ level: 1 })
-
+                        editor.chain().focus().toggleHeading({ level: 2 }).run();
                     }}
                     className={""}>
                 <Heading2/>
+            </button>
+            <button
+                onClick={(e)=>{
+                    e.preventDefault();
+                    editor.chain().focus().toggleUndo().run();
+                }}>
+                <Undo/>
+            </button>
+            <button
+                onClick={(e)=>{
+                    e.preventDefault();
+                    editor.chain().focus().toggleBulletList().run();
+                }}>
+                <List/>
             </button>
         </div>
 

@@ -5,7 +5,7 @@ import { doc, getDoc } from 'firebase/firestore'
 function Post() {
     const [body, setBody] = useState([])
     const setContent = async()=>{
-        const post = await getDoc(doc(db, "posts", 'oVZrhU5r225nQo9wKrvz'));
+        const post = await getDoc(doc(db, "posts", 'IomdDPaEfSQZtB1npeDr'));
         setBody(post.data().content);
         console.log("Post:",post.data().content);
     }

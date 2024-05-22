@@ -21,7 +21,7 @@ const Tiptap = ({onChange, content}) => {
       }})
     ],
     editorProps:{ attributes:{
-                      class:"flex flex-col bg-slate-200 h-52"
+                      class:"flex flex-col bg-slate-200"
     }},
     onUpdate:({editor})=>{
       handleChange(editor.getHTML());

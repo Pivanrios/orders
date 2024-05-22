@@ -13,6 +13,7 @@ const router = createBrowserRouter(//version 6.4 of react-router
         <Route path='takeOrder' element={<Form/>}/>
         <Route path='orders' element={<Orders/>}/>
         <Route path='post' element={<Post/>}/>
+        <Route path='write' element={<TextEditor/>}/>
       </Route>
   )
 );

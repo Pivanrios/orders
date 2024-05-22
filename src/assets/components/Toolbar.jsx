@@ -8,8 +8,8 @@ import { Bold,
 
 function Toolbar({editor, content}) {
   return (
-    <div className='bg-slate-200'>Toolbar
-        <div>
+    <div className='flex flex-row justify-between mx-2'>
+        <div className='flex flex-row '>
             <button onClick={(e)=>{
                 e.preventDefault();
                 editor.chain().focus().toggleBold().run();
@@ -48,7 +48,9 @@ function Toolbar({editor, content}) {
                 <List/>
             </button>
         </div>
-
+        {content && (
+            <button className='px-2 bg-slate-400 rounded-full'>add</button>
+        )}
     </div>
   )
 }

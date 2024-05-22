@@ -5,12 +5,14 @@ import { Route,RouterProvider,createBrowserRouter, createRoutesFromElements } fr
 import Orders from './assets/components/Orders.jsx';
 import Form from './assets/components/Form.jsx';
 import TextEditor from './assets/components/TextEditor.jsx';
+import Post from './assets/components/Post.jsx';
 
 const router = createBrowserRouter(//version 6.4 of react-router
   createRoutesFromElements(
-      <Route path='/' element={<TextEditor/>}>
+      <Route path='/' >
         <Route path='takeOrder' element={<Form/>}/>
         <Route path='orders' element={<Orders/>}/>
+        <Route path='post' element={<Post/>}/>
       </Route>
   )
 );
